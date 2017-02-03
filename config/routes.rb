@@ -1,17 +1,17 @@
 Rails.application.routes.draw do
   devise_for :users
-  resources :pins do
+  resources :boasts do
     member do
-      put "like", to: "pins#upvote"
+      put "like", to: "boasts#upvote"
     end
   end
 
   resources :users do
     resources :categories do
-      resources :pins
+      resources :boasts
     end
   end
 
-  root "pins#index"
+  root "boasts#index"
 
 end

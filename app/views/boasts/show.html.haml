@@ -1,0 +1,24 @@
+#boast_show.row
+  .col-md-8.col-md-offset-2
+    .panel.panel-default
+      .panel-heading.boast_image
+        = image_tag @boast.image.url
+      .panel-body
+        %h1= @boast.title
+        %br
+        %br
+        %p.description= @boast.description
+      .panel-footer
+        .row
+          .col-md-6
+            %p.user
+            Submitted by:
+            %i= @boast.user.username
+          .col-md-6
+            .btn-group.pull-right
+              = link_to like_boast_path(@boast), method: :put, class: "btn btn-default" do
+                %span.glyphicon.glyphicon-thumbs-up
+                  = @boast.get_upvotes.size
+              - if user_signed_in?
+                = link_to "Edit", edit_boast_path, class: "btn btn-default"
+                = link_to "Delete", boast_path, method: :delete, data: { confirm: "Are you sure you want to delete this boast?"}, class: "btn btn-default"

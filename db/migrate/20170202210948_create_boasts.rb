@@ -1,6 +1,6 @@
-class CreatePins < ActiveRecord::Migration
+class CreateBoasts < ActiveRecord::Migration
   def change
-    create_table :pins do |t|
+    create_table :boasts do |t|
       t.string :title
       t.text :description
       t.integer :category_id

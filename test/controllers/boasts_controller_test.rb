@@ -1,6 +1,6 @@
 require 'test_helper'
 
-class PinTest < ActiveSupport::TestCase
+class BoastsControllerTest < ActionController::TestCase
   # test "the truth" do
   #   assert true
   # end

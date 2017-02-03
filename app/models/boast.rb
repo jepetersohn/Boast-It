@@ -1,4 +1,4 @@
-class Pin < ActiveRecord::Base
+class Boast < ActiveRecord::Base
   acts_as_votable
   scope :category, -> category { where(:category => category) }
   belongs_to :user
