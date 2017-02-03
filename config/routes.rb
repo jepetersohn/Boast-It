@@ -6,6 +6,12 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :users do
+    resources :categories do
+      resources :pins
+    end
+  end
+
   root "pins#index"
 
 end
