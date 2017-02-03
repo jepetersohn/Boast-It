@@ -14,6 +14,9 @@
             %p.user
             Submitted by:
             %i= @boast.user.username
+            to
+            %br
+            %b= link_to @boast.category.name, user_category_url(@boast.user_id, @boast.category_id)
           .col-md-6
             .btn-group.pull-right
               = link_to like_boast_path(@boast), method: :put, class: "btn btn-default" do
