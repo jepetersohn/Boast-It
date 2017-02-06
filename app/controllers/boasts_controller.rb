@@ -1,10 +1,13 @@
 class BoastsController < ApplicationController
   before_action :find_boast, only: [:show, :edit, :update, :destroy, :upvote]
   before_action :authenticate_user!, except: [:index, :show]
-  has_scope :by_category
+  has_scope :category
 
   def index
     @boasts = Boast.all.order("created_at DESC")
+    if user_signed_in?
+      @user = current_user.id
+    end
   end
 
   def show

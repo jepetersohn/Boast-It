@@ -270,6 +270,7 @@ $dropDown       : true;
     padding: 35px;
     h1 {
       margin: 0 0 10px 0;
+      color: black;
     }
     .description {
       color: #868686;
@@ -281,11 +282,10 @@ $dropDown       : true;
 .panel-footer {
     background-color: #745754;
     width:100%;
-    height:8%;
-    position:fixed;
+    height:4%;
     bottom:0;
     left:0;
-    padding: 20px 35px;
+    padding: 10px 25px;
     p {
       margin: 0;
     }
@@ -296,6 +296,25 @@ $dropDown       : true;
 textarea {
   height: 80px;
 }
+.panel-footer-form {
+    color: black;
+    height:4%;
+    bottom:0;
+    left:0;
+    padding: 10px 25px;
+    p {
+      margin: 0;
+    }
+    .user {
+      padding-top: 8px;
+    }
+  }
+
+.btn {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+}
 
 .hit-the-floor {
   float: left;
@@ -304,7 +323,17 @@ textarea {
   text-shadow: 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
 }
 a {
-  color: #00CED1;
+  color: #6ab7ca;
 }
 
+.form-group {
+  color: #6ab7ca;
+}
 
+p {
+  color: #745754;
+}
+
+.category-show {
+  color: black;
+}
