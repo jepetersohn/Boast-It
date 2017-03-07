@@ -1,0 +1,35 @@
+!!! 5
+%html
+%head
+  %title Boast It
+  = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true
+  = javascript_include_tag 'application', 'data-turbolinks-track' => true
+  = csrf_meta_tags
+
+%body
+  %nav.navbar.navbar-default
+    .container
+      .wrapper
+        .clip-text.clip-text_two.hit-the-floor Boast It
+      / .hit-the-floor Boast It
+
+      - if user_signed_in?
+        %ul.nav.navbar-nav.navbar-right
+          %li= link_to "Home", root_path
+          %li= link_to "New Boast", new_boast_path
+          %li= link_to "Account", edit_user_registration_path
+          %li= link_to "Your Boasts", user_path(current_user.id)
+          %li= link_to "Log Out", destroy_user_session_path, method: :delete
+      - else
+        %ul.nav.navbar-nav.navbar-right
+          %li= link_to "Home", root_path
+          %li= link_to "Register New Account", new_user_registration_path
+          %li= link_to "Log In", new_user_session_path
+      %h4 Go on, show off
+  .container
+    - flash.each do |name, msg|
+      = content_tag :div, msg, class: "alert alert-info"
+    = yield
+    .panel-footer
+      %ul.nav.navbar-right
+        %li= link_to "About", new_user_session_path

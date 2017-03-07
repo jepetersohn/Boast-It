@@ -1,0 +1,346 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or any plugin's vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+ *= require 'masonry/transitions'
+ *= require_tree .
+ *= require_self
+ */
+
+ @import "bootstrap-sprockets";
+ @import "bootstrap";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+*,
+:before,
+:after {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+html,
+body {
+    min-height: 100%;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+    color: #fff;
+    background-color: #000;
+}
+
+.wrapper {
+    text-align: center;
+    height: 175px;
+}
+
+.title {
+    font-size: 2em;
+    position: relative;
+    margin: 0 auto 1em;
+    padding: 1em 1em .25em 1em;
+    text-align: center;
+    text-transform: uppercase;
+}
+.title:after {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    width: 240px;
+    height: 4px;
+    margin-left: -120px;
+    content: '';
+    background-color: #fff;
+}
+
+/* Clip text element */
+.clip-text {
+    font-size: 7em;
+    font-weight: bold;
+    line-height: 1;
+    position: relative;
+    display: inline-block;
+    margin: .25em;
+
+    text-align: left;
+    /* Color fallback */
+    color: #fff;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.clip-text:before,
+.clip-text:after {
+    position: absolute;
+    content: '';
+}
+
+/* Background */
+.clip-text:before {
+    z-index: -2;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-image: inherit;
+}
+
+/* Text Background (black zone) */
+.clip-text:after {
+    position: absolute;
+    z-index: -1;
+    top: .125em;
+    right: .125em;
+    bottom: .125em;
+    left: .125em;
+    background-color: #000;
+}
+
+/* Change the background position to display letter when the black zone isn't here */
+.clip-text--no-textzone:before {
+    background-position: -.65em 0;
+}
+
+.clip-text--no-textzone:after {
+    content: none;
+}
+
+/* Use Background-size cover for photo background and no-repeat background */
+.clip-text--cover,
+.clip-text--cover:before {
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+            background-size: cover;
+  background-position: 50% 50%;
+}
+
+
+.clip-text_two {
+    background-image: url(http://maxpixel.freegreatpicture.com/static/photo/1x/Stamps-Post-Mail-Philately-France-Collection-1289073.jpg);
+}
+
+
+
+body {
+  background: #FFFFF0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 100;
+}
+
+$bgDefault      : #745754;
+$bgHighlight    : #524745;
+$colDefault     : #6ab7ca;
+$colHighlight   : #94acb4;
+$dropDown       : true;
+.navbar-default {
+  height: 160px;
+  background-color: $bgDefault;
+  border-color: $bgHighlight;
+  .navbar-brand {
+    color: $colDefault;
+    &:hover, &:focus {
+      color: $colHighlight; }}
+  .navbar-text {
+    color: $colDefault; }
+  .navbar-nav {
+    > li {
+      > a {
+        color: $colDefault;
+        &:hover,  &:focus {
+          color: $colHighlight; }}
+      @if $dropDown {
+        > .dropdown-menu {
+          background-color: $bgDefault;
+          > li {
+            > a {
+              color: $colDefault;
+              &:hover,  &:focus {
+                color: $colHighlight;
+                background-color: $bgHighlight; }}
+            > .divider {
+              background-color: $bgHighlight;}}}}}
+    @if $dropDown {
+      .open .dropdown-menu > .active {
+        > a, > a:hover, > a:focus {
+          color: $colHighlight;
+          background-color: $bgHighlight; }}}
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}
+    > .open {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
+  .navbar-right {
+    margin-top: -60px;
+  }
+  h4 {
+    color: #333333;
+    padding-left: 250px;
+    font-weight: bold;
+    font-family: Copperplate / Copperplate Gothic Light, sans-serif;
+    margin-top: -43px;
+    position: absolute;
+  }
+  .navbar-toggle {
+    border-color: $bgHighlight;
+    &:hover, &:focus {
+      background-color: $bgHighlight; }
+    .icon-bar {
+      background-color: $colDefault; }}
+  .navbar-collapse,
+  .navbar-form {
+    border-color: $colDefault; }
+  .navbar-link {
+    color: $colDefault;
+    &:hover {
+      color: $colHighlight; }}}
+@media (max-width: 767px) {
+  .navbar-default .navbar-nav .open .dropdown-menu {
+    > li > a {
+      color: $colDefault;
+      &:hover, &:focus {
+        color: $colHighlight; }}
+    > .active {
+      > a, > a:hover, > a:focus {
+        color: $colHighlight;
+        background-color: $bgHighlight; }}}
+}
+
+#boasts {
+  margin: 0 auto;
+  width: 100%;
+  .box {
+    margin: 10px;
+    width: 350px;
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.22);
+    border-radius: 7px;
+    text-align: center;
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    h2 {
+      font-size: 22px;
+      margin: 0;
+      padding: 25px 10px;
+      a {
+        color: #474747;
+      }
+    }
+    .user {
+      font-size: 12px;
+      border-top: 1px solid #EAEAEA;
+      padding: 15px;
+      margin: 0;
+    }
+  }
+}
+
+#edit_page {
+  .current_image {
+    img {
+      display: block;
+      margin: 20px 0;
+    }
+  }
+}
+
+#boast_show {
+  .panel-heading {
+    padding: 0;
+  }
+  .boast_image {
+    img {
+      max-width: 100%;
+      width: 100%;
+      display: block;
+      margin: 0 auto;
+    }
+  }
+  .panel-body {
+    padding: 35px;
+    h1 {
+      margin: 0 0 10px 0;
+      color: black;
+    }
+    .description {
+      color: #868686;
+      line-height: 1.75;
+      margin: 0;
+    }
+  }
+}
+.panel-footer {
+    border-top: solid #745754;
+    width:100%;
+    background-color: #FFFFF0;
+    bottom:0;
+    left:0;
+    padding: 10px 25px;
+    p {
+      margin: 0;
+    }
+    .user {
+      padding-top: 8px;
+    }
+  }
+textarea {
+  height: 80px;
+}
+.panel-footer-form {
+    color: black;
+    height:4%;
+    bottom:0;
+    left:0;
+    padding: 10px 25px;
+    p {
+      margin: 0;
+    }
+    .user {
+      padding-top: 8px;
+    }
+  }
+
+.btn {
+    color: #fff;
+    background-color: #428bca;
+    border-color: #357ebd;
+}
+
+.hit-the-floor {
+  float: left;
+  font-size: 7em;
+  font-weight: bold;
+  text-shadow: 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+}
+a {
+  color: #6ab7ca;
+}
+
+.form-group {
+  color: #6ab7ca;
+}
+
+p {
+  color: #745754;
+}
+
+.category-show {
+  color: black;
+}

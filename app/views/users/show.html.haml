@@ -1,0 +1,7 @@
+#boasts.transitions-enabled
+  - @boasts.each do |boast|
+    .box.panel.panel-default
+      = link_to (image_tag boast.image.url), boast
+      .panel-body
+        %h1= link_to boast.title, boast
+        %h6= link_to boast.category.name, user_category_url(boast.user_id, boast.category_id)
