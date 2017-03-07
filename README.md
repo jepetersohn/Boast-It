@@ -8,7 +8,7 @@ Whatever your accomplishment, "Boast It" by posting it.
 
 ## Description
 
-This is a solo project I created which closely mimics the functionality of Pinterest. I'm an avid reader, and I wanted a visual way to keep track of the books I read. Users can create accounts, log in/out, and publish categories boards full of posts.
+This is a solo project I created which closely mimics the functionality of Pinterest. I'm an avid reader, and I wanted a visual way to keep track of the books I read. Users can create accounts, log in/out, and publish categorized boards full of posts.
 
 ## Technologies used:
 * Ruby on Rails
