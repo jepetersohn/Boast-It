@@ -126,7 +126,6 @@ body {
   background-position: 50% 50%;
 }
 
-/* Background image from http://thepatternlibrary.com/ and http://lorempixel.com */
 
 .clip-text_two {
     background-image: url(http://maxpixel.freegreatpicture.com/static/photo/1x/Stamps-Post-Mail-Philately-France-Collection-1289073.jpg);
@@ -189,6 +188,14 @@ $dropDown       : true;
         background-color: $bgHighlight; }}}
   .navbar-right {
     margin-top: -60px;
+  }
+  h4 {
+    color: #333333;
+    padding-left: 250px;
+    font-weight: bold;
+    font-family: Copperplate / Copperplate Gothic Light, sans-serif;
+    margin-top: -43px;
+    position: absolute;
   }
   .navbar-toggle {
     border-color: $bgHighlight;
@@ -280,9 +287,9 @@ $dropDown       : true;
   }
 }
 .panel-footer {
-    background-color: #745754;
+    border-top: solid #745754;
     width:100%;
-    height:4%;
+    background-color: #FFFFF0;
     bottom:0;
     left:0;
     padding: 10px 25px;

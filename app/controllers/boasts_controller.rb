@@ -31,7 +31,8 @@ class BoastsController < ApplicationController
   end
 
   def update
-    if @boast.update(boast_params)
+    unlocked_params = ActiveSupport::HashWithIndifferentAccess.new(boast_params)
+    if @boast.update(unlocked_params)
       redirect_to @boast, notice: "Boast was successfuly updated"
     else
       render 'edit'

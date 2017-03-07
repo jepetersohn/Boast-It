@@ -25,11 +25,11 @@
           %li= link_to "Home", root_path
           %li= link_to "Register New Account", new_user_registration_path
           %li= link_to "Log In", new_user_session_path
+      %h4 Go on, show off
   .container
     - flash.each do |name, msg|
       = content_tag :div, msg, class: "alert alert-info"
     = yield
-    .panel.panel-default
-      .panel-footer
-        %ul.nav
-          %li= link_to "About", new_user_session_path
+    .panel-footer
+      %ul.nav.navbar-right
+        %li= link_to "About", new_user_session_path
